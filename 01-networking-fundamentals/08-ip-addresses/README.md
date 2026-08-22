@@ -1,114 +1,150 @@
-# Wireless Networking
+# IP Addresses
 
 ## Overview
 
-Wireless networking allows devices to communicate over a network without using physical network cables.
+An **IP address (Internet Protocol address)** is a logical address assigned to a device on a network.
 
-Wireless communication commonly uses radio signals to transmit data.
+It is used to identify a device and help deliver data to the correct destination.
 
 ---
 
-## Wi-Fi
+## IPv4
 
-Wi-Fi is a common technology used to connect devices to a wireless local area network (WLAN).
+**IPv4** stands for **Internet Protocol version 4**.
+
+IPv4 addresses use **32 bits** and are written as four decimal numbers separated by dots.
 
 ### Example
 
-A home Wi-Fi network can connect devices such as:
+    192.168.1.10
 
-- Laptop
-- Smartphone
-- Smart TV
-- Printer
-
-    Wi-Fi Router
-       /  |  \
-    Laptop Phone TV
+Each part can have a value from **0 to 255**.
 
 ---
 
-## Wireless Access Point
+## IPv6
 
-A **Wireless Access Point (AP)** is a device that allows wireless devices to connect to a network.
+**IPv6** stands for **Internet Protocol version 6**.
 
-For example, a laptop can connect to an access point using Wi-Fi.
+IPv6 was developed to provide a much larger number of addresses than IPv4.
 
-    Laptop )))
-              \
-               Access Point
-              /
-    Phone  )))
+IPv6 addresses use **128 bits** and are written using hexadecimal numbers separated by colons.
 
----
+### Example
 
-## Wireless Network Components
-
-Common components include:
-
-- Wireless Access Point
-- Wireless Router
-- Wireless Network Adapter
-- Wireless Devices
-
-### Wireless Network Adapter
-
-A wireless network adapter allows a device to communicate with a wireless network.
-
-Modern laptops and smartphones usually have built-in wireless adapters.
+    2001:db8::1
 
 ---
 
-## Advantages of Wireless Networking
+## Public IP Address
 
-- No physical cable is required for each device.
-- Devices can connect while moving within the wireless coverage area.
-- Easy to add wireless devices.
-- Useful for homes, offices, schools, and public networks.
+A **public IP address** is an address used to identify a network or device on the Internet.
 
----
+It must be globally unique within the public Internet.
 
-## Disadvantages of Wireless Networking
+### Example
 
-- Wireless signals can be affected by interference.
-- Wireless networks can have security risks if poorly configured.
-- Signal strength decreases with distance and obstacles.
-- Unauthorized devices may attempt to connect to the network.
+    Internet
+       |
+    Public IP
+       |
+    Router / Network
 
 ---
 
-## Wireless Security
+## Private IP Address
 
-Wireless networks should be properly secured to prevent unauthorized access.
+A **private IP address** is used inside a private network such as a home, office, or internal organization network.
 
-Important security measures include:
+Private IP addresses are not directly routable across the public Internet.
 
-- Use strong Wi-Fi passwords.
-- Use modern wireless security standards.
-- Change default router credentials.
-- Keep router firmware updated.
-- Avoid using open Wi-Fi for sensitive activities.
+### Common Private IPv4 Ranges
+
+- 10.0.0.0 – 10.255.255.255
+- 172.16.0.0 – 172.31.255.255
+- 192.168.0.0 – 192.168.255.255
+
+### Example
+
+    192.168.1.10
 
 ---
 
-## Wireless Networking and Cybersecurity
+## Static IP Address
 
-Wireless networks are an important part of cybersecurity because attackers may target wireless communication to gain unauthorized access or capture network traffic.
+A **static IP address** is an IP address that is manually configured or reserved so that it normally remains the same.
 
-Wireless penetration testing involves assessing the security of wireless networks. The course material specifically covers WLAN attacks and wireless security testing. :contentReference[oaicite:1]{index=1}
+### Example
+
+A server may use a static IP so other devices can consistently connect to it.
+
+---
+
+## Dynamic IP Address
+
+A **dynamic IP address** is assigned automatically, commonly using **DHCP (Dynamic Host Configuration Protocol)**.
+
+The address can change over time.
+
+---
+
+## Loopback Address
+
+A **loopback address** refers to the local device itself.
+
+For IPv4, the commonly used loopback address is:
+
+    127.0.0.1
+
+It is also commonly called **localhost**.
+
+---
+
+## IP Address Example
+
+Consider:
+
+    192.168.1.10
+
+Here:
+
+- `192.168.1.10` → IP address
+- `192.168.1` → Network portion in a common /24 network
+- `10` → Host portion in that example
+
+The exact network and host portions depend on the **subnet mask or CIDR prefix**.
+
+---
+
+## Why IP Addresses Are Important in Cybersecurity
+
+IP addresses are important in cybersecurity because security professionals use them to:
+
+- Identify network hosts
+- Understand network communication
+- Investigate network traffic
+- Perform network scanning
+- Identify potential sources and destinations of traffic
+- Configure firewalls and access controls
 
 ---
 
 ## Key Points
 
-- Wireless networking allows communication without physical network cables.
-- Wi-Fi is commonly used for wireless LANs.
-- An Access Point allows wireless devices to connect to a network.
-- Wireless adapters allow devices to communicate using wireless signals.
-- Wireless networks must be properly secured.
-- Wireless security is an important part of cybersecurity.
+- An IP address identifies a device or network interface on an IP network.
+- IPv4 uses 32-bit addresses.
+- IPv6 uses 128-bit addresses.
+- Public IP addresses are used on the Internet.
+- Private IP addresses are used inside private networks.
+- Static IP addresses normally remain unchanged.
+- Dynamic IP addresses are assigned automatically and may change.
+- `127.0.0.1` is the IPv4 loopback address.
+- DHCP can automatically assign IP addresses.
 
 ---
 
 ## Summary
 
-Wireless networking provides network connectivity without physical cables. Wi-Fi, wireless access points, routers, and wireless network adapters are commonly used to connect devices. Because wireless networks can be targeted by attackers, proper security configuration is important.
+IP addresses are fundamental to network communication. IPv4 and IPv6 provide addressing systems for devices and networks, while public, private, static, and dynamic addressing are used in different networking situations.
+
+Understanding IP addresses is essential for networking, penetration testing, network scanning, and cybersecurity.
